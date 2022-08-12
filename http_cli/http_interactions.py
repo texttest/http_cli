@@ -16,7 +16,7 @@ def do_request_response(base_url=None, host="localhost", port=3001, root_directo
 
     Expects to find at least this file:
 
-        * rest_command.txt
+        * request_url.txt
 
     You may also specify files for headers, cookies, payload, in these files respectively:
 
@@ -29,7 +29,7 @@ def do_request_response(base_url=None, host="localhost", port=3001, root_directo
         * status_code.txt - HTTP status code
         * response_headers.txt - headers
         * response_cookies.txt - cookies
-        * response.json or response.txt - payload
+        * response_body.json or response_body.txt - payload
 
     :param base_url: the stem of the url eg http://localhost:3001
     :param host: instead of specifying a base_url you can specify host, http:// will be added to it, default is 'localhost'
@@ -119,7 +119,7 @@ def write_key_value(the_dict, filename):
 
 
 def read_http_parameters(base_url, root_directory: Path) -> HttpRequest:
-    method, url = read_http_config_file(root_directory / "rest_command.txt")
+    method, url = read_http_config_file(root_directory / "request_url.txt")
 
     return HttpRequest(
         url=f"{base_url}{url}",
@@ -135,14 +135,14 @@ def is_json(response: requests.Response):
 
 
 def write_response_files(response: requests.Response, root_directory: Path):
-    with open(root_directory / "status_code.txt", "w") as f:
+    with open(root_directory / "response_status_code.txt", "w") as f:
         f.write(str(response.status_code))
 
     if is_json(response):
-        with open("response.json", "w") as f:
+        with open("response_body.json", "w") as f:
             f.write(response.text)
     else:
-        with open("response.txt", "w") as f:
+        with open("response_body.txt", "w") as f:
             f.write(response.text)
 
     write_key_value(response.headers, "response_headers.txt")

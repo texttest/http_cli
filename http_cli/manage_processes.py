@@ -40,8 +40,9 @@ def start_server(command: list, port: int, ready_message=None, retry_count=3, ad
     logging.info("starting server")
     cwd = os.getcwd()
     my_env = os.environ.copy()
-    for key, value in additional_environment.items():
-        my_env[key] = value
+    if additional_environment:
+        for key, value in additional_environment.items():
+            my_env[key] = value
 
     my_env["PORT"] = f"{port}"
 
