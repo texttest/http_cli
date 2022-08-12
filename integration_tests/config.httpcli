@@ -5,7 +5,7 @@ executable:${TEXTTEST_HOME}\example\example_usage.py
 filename_convention_scheme:standard
 
 # Expanded name to use for application
-full_name:Example http_cli
+full_name:Example http_text_cli
 
 copy_test_path:request_url.txt
 

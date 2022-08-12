@@ -8,7 +8,7 @@ import logging
 import os
 import sys
 
-from http_cli import find_unique_port, get_base_url, start_server, do_request_response, stop_server
+from http_text_cli import find_unique_port, get_base_url, start_server, do_request_response, stop_server
 
 if __name__ == "__main__":
     logging.getLogger().addHandler(logging.StreamHandler(sys.stdout))

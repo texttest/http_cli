@@ -1,9 +1,13 @@
+
 [build-system]
 requires = ["setuptools>=61.0", "requests"]
 build-backend = "setuptools.build_meta"
 
+[tool.setuptools]
+packages=["http_text_cli"]
+
 [project]
-name = "http_cli"
+name = "http_text_cli"
 version = "1.0.0"
 authors = [
   { name="Emily Bache", email="emily@bacheconsulting.com" },
@@ -19,5 +23,5 @@ classifiers = [
 ]
 
 [project.urls]
-"Homepage" = "https://github.com/texttest/http_cli"
-"Bug Tracker" = "https://github.com/texttest/http_cli/issues"
+"Homepage" = "https://github.com/texttest/http_text_cli"
+"Bug Tracker" = "https://github.com/texttest/http_text_cli/issues"

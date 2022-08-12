@@ -1,5 +1,5 @@
 {
-  "name": "http_cli_example",
+  "name": "http_text_cli_example",
   "version": "1.0.0",
   "private": true,
   "scripts": {

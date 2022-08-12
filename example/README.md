@@ -1,12 +1,12 @@
-# Example using http_cli
+# Example using http_text_cli
 
-This folder contains a node.js application and an example python script that uses http_cli to start it, run one request/response, then stop it.
+This folder contains a node.js application and an example python script that uses http_text_cli to start it, run one request/response, then stop it.
 
 First build the node.js application:
 
     npm install
 
-Put http_cli on your PYTHONPATH, eg
+Put http_text_cli on your PYTHONPATH, eg
 
      $Env:PYTHONPATH = "C:\Users\Administrator\workspace\http_to_cli\"
 
