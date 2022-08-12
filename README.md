@@ -1,2 +1,4 @@
-# http_to_cli
-Turns a HTTP (REST) api into a command line script you can test with TextTest
+# http_cli 
+Turns an HTTP (REST) api into a command line script you can test with TextTest
+
+See an example in example_usage.py
