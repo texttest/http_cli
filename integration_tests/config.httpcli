@@ -18,3 +18,4 @@ response_headers:response_headers.txt
 
 [run_dependent_text]
 stdout:(url http://localhost:)\d+{REPLACE \1<port>}
+response_headers:Date:

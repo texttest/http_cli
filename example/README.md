@@ -8,7 +8,7 @@ First build the node.js application:
 
 Put http_text_cli on your PYTHONPATH, eg
 
-     $Env:PYTHONPATH = "C:\Users\Administrator\workspace\http_to_cli\"
+     $Env:PYTHONPATH = "C:\Users\Administrator\workspace\http_text_cli\"
 
 run the python script:
 
